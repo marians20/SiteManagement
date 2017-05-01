@@ -1,0 +1,65 @@
+@model SiteManagement.Models.Lv
+
+@{
+    ViewData["Title"] = "Delete";
+}
+
+<h2>Delete</h2>
+
+<h3>Are you sure you want to delete this?</h3>
+<div>
+    <h4>Lv</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <input type="hidden" asp-for="Id" />
+        <dt>
+            @Html.DisplayNameFor(model => model.PosNr)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.PosNr)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.Name)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.Name)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.Ammount)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.Ammount)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.Ep)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.Ep)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.Gp)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.Gp)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.Group)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.Group.Id)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.MeasureUnit)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.MeasureUnit.Id)
+        </dd>
+    </dl>
+    
+    <form asp-action="Delete">
+        <div class="form-actions no-color">
+            <input type="submit" value="Delete" class="btn btn-default" /> |
+            <a asp-action="Index">Back to List</a>
+        </div>
+    </form>
+</div>
